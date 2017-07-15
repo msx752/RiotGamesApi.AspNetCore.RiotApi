@@ -23,9 +23,15 @@ $newBuildNumber = "$buildYear.$month.$day.$hourMinute";
 
 Write-Host "New Nuget Package Version:" $newBuildNumber
 
-.\nuget restore
+# NUGET
+$sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
+$targetNugetExe = "$rootPath\nuget.exe"
+Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
+Set-Alias nuget $targetNugetExe -Scope Global -Verbose;
+#
+nuget restore
 dotnet restore
 
 dotnet clean -c Release
 dotnet build -c Release  /p:Version=$newBuildNumber --framework netcoreapp1.1
-.\nuget pack -version $newBuildNumber
+nuget pack -version $newBuildNumber
