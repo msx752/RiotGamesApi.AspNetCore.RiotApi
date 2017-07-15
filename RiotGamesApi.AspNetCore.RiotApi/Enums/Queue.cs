@@ -5,6 +5,8 @@
     /// </summary>
     public enum Queue
     {
+        UNDEFINED,
+
         /// <summary>
         /// use only matchlist query 
         /// </summary>

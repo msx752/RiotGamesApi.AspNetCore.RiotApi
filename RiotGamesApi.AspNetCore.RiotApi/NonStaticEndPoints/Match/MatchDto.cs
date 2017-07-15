@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using RiotGamesApi.AspNetCore.RiotApi.Converters;
+using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
 {
@@ -28,20 +30,25 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public string gameVersion { get; set; }
 
         //
+
+        [JsonConverter(typeof(StringToEnum<Platform>))]
         [JsonProperty("platformId")]
-        public string platformId { get; set; }
+        public Platform platformId { get; set; }
 
         //
+
+        [JsonConverter(typeof(StringToEnum<GameMode>))]
         [JsonProperty("gameMode")]
-        public string gameMode { get; set; }
+        public GameMode gameMode { get; set; }
 
         //
         [JsonProperty("mapId")]
         public int mapId { get; set; }
 
         //
+        [JsonConverter(typeof(StringToEnum<GameType>))]
         [JsonProperty("gameType")]
-        public string gameType { get; set; }
+        public GameType gameType { get; set; }
 
         //
         [JsonProperty("teams")]
@@ -55,7 +62,8 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         [JsonProperty("gameDuration")]
         public long gameDuration { get; set; }
 
+        [JsonConverter(typeof(LongToDateTime))]
         [JsonProperty("gameCreation")]
-        public long gameCreation { get; set; }
+        public DateTime gameCreation { get; set; }
     }
 }

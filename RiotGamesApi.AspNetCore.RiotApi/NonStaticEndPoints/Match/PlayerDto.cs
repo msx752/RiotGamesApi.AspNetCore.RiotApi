@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using RiotGamesApi.AspNetCore.RiotApi.Converters;
+using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
 {
@@ -20,8 +22,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public string matchHistoryUri { get; set; }
 
         //
+        [JsonConverter(typeof(StringToEnum<Platform>))]
         [JsonProperty("platformId")]
-        public string platformId { get; set; }
+        public Platform platformId { get; set; }
 
         //
         [JsonProperty("currentAccountId")]

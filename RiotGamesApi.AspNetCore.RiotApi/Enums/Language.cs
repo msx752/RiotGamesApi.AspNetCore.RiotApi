@@ -2,6 +2,7 @@
 {
     public enum Language
     {
+        UNDEFINED,
         cs_CZ,
 
         de_DE,

@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using RiotGamesApi.AspNetCore.RiotApi.Converters;
+using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
 {
@@ -36,8 +38,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public Dictionary<string, double> xpPerMinDeltas { get; set; }
 
         //
+        [JsonConverter(typeof(StringToEnum<Role>))]
         [JsonProperty("role")]
-        public string role { get; set; }
+        public Role role { get; set; }
 
         //
         [JsonProperty("damageTakenDiffPerMinDeltas")]

@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using RiotGamesApi.AspNetCore.RiotApi.Converters;
+using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Spectator
 {
@@ -16,20 +18,24 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Spectator
         public long gameStartTime { get; set; }
 
         //The ID of the platform on which the game is being played
+
+        [JsonConverter(typeof(StringToEnum<Platform>))]
         [JsonProperty("platformId")]
-        public string platformId { get; set; }
+        public Platform platformId { get; set; }
 
         //The game mode
+        [JsonConverter(typeof(StringToEnum<GameMode>))]
         [JsonProperty("gameMode")]
-        public string gameMode { get; set; }
+        public GameMode gameMode { get; set; }
 
         //The ID of the map
         [JsonProperty("mapId")]
         public long mapId { get; set; }
 
         //The game type
+        [JsonConverter(typeof(StringToEnum<GameType>))]
         [JsonProperty("gameType")]
-        public string gameType { get; set; }
+        public GameType gameType { get; set; }
 
         //Banned champion information
         [JsonProperty("bannedChampions")]

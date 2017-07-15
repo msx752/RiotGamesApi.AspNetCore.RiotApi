@@ -2,14 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using RiotGamesApi.AspNetCore.RiotApi.Converters;
+using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.StatusEndPoints
 {
     public class Translation
     {
         //
+        [JsonConverter(typeof(StringToEnum<Language>))]
         [JsonProperty("locale")]
-        public string locale { get; set; }
+        public Language locale { get; set; }
 
         //
         [JsonProperty("content")]

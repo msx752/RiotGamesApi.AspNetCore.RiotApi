@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using RiotGamesApi.AspNetCore.RiotApi.Converters;
+using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.StatusEndPoints
 {
@@ -12,8 +14,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.StatusEndPoints
         public string name { get; set; }
 
         //
+        [JsonConverter(typeof(StringToEnum<Platform>))]
         [JsonProperty("region_tag")]
-        public string region_tag { get; set; }
+        public Platform region_tag { get; set; }
 
         //
         [JsonProperty("hostname")]

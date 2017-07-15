@@ -17,9 +17,16 @@ namespace RiotGamesApi.AspNetCore.RiotApi.Converters
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            TEnum enumVal = (TEnum)Enum.Parse(typeof(TEnum), reader.Value.ToSafetyString());
-            if (enumVal == null)
-                throw new Exception($"type of {typeof(TEnum).Name} doesn't contain such '{reader.Value}' value");
+            object enumVal = null;
+            try
+            {
+                enumVal = (TEnum)Enum.Parse(typeof(TEnum), reader.Value.ToSafetyString(), true);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                enumVal = (TEnum)Enum.Parse(typeof(TEnum), "UNDEFINED", true);
+            }
             return enumVal;
         }
 

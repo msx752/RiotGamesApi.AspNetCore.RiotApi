@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.TournamentEndPoints
 {
@@ -18,8 +19,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.TournamentEndPoints
         public string spectators { get; set; }
 
         //The tournament code's region. (Legal values: BR, EUNE, EUW, JP, LAN, LAS, NA, OCE, PBE, RU, TR)
+        [JsonConverter(typeof(Region))]
         [JsonProperty("region")]
-        public string region { get; set; }
+        public Region region { get; set; }
 
         //The provider's ID.
         [JsonProperty("providerId")]

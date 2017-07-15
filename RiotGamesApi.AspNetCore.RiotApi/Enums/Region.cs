@@ -2,6 +2,8 @@
 {
     public enum Region
     {
+        UNDEFINED,
+
         ///<summary>    Turkey
         ///</summary>
         tr,
