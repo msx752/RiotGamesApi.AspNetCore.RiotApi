@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace RiotGamesApi.AspNetCore.RiotApi.TournamentStub
+namespace RiotGamesApi.AspNetCore.RiotApi.TournamentStubEndPoints
 {
     public class LobbyEventDTOWrapper
     {

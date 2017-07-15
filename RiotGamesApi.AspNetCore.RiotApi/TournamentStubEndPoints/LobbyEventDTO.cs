@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace RiotGamesApi.AspNetCore.RiotApi.TournamentStub
+namespace RiotGamesApi.AspNetCore.RiotApi.TournamentStubEndPoints
 {
     public class LobbyEventDTO
     {

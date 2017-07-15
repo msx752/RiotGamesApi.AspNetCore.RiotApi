@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace RiotGamesApi.AspNetCore.RiotApi.Tournament
+namespace RiotGamesApi.AspNetCore.RiotApi.TournamentEndPoints
 {
     public class TournamentCodeDTO
     {
