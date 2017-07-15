@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Reflection;
+using RiotGamesApi.AspNetCore.RiotApi.Extensions;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.Converters
 {
@@ -14,7 +15,7 @@ namespace RiotGamesApi.AspNetCore.RiotApi.Converters
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)
-                .AddMilliseconds(long.Parse(reader.Value.ToString()));
+                .AddMilliseconds(long.Parse(reader.Value.ToSafetyString()));
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
