@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using RiotGamesApi.AspNetCore.RiotApi.Converters;
+using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.League
 {
@@ -10,8 +12,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.League
         [JsonProperty("rank")]
         public string rank { get; set; }
 
+        [JsonConverter(typeof(StringToEnum<Queue>))]
         [JsonProperty("queueType")]
-        public string queueType { get; set; }
+        public Queue queueType { get; set; }
 
         [JsonProperty("hotStreak")]
         public bool hotStreak { get; set; }

@@ -1,4 +1,4 @@
-﻿namespace RiotGamesApi.Enums
+﻿namespace RiotGamesApi.AspNetCore.RiotApi.Enums
 {
     public enum Language
     {

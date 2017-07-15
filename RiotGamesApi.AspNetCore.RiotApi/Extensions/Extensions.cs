@@ -2,7 +2,6 @@
 
 using RiotGamesApi.AspNetCore.RiotApi.Enums;
 
-using RiotGamesApi.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,6 +10,21 @@ namespace RiotGamesApi.AspNetCore.RiotApi.Extensions
 {
     public static class Extensions
     {
+        /// <summary>
+        /// returns empty string if it is null 
+        /// </summary>
+        /// <param name="obj">
+        /// </param>
+        /// <returns>
+        /// </returns>
+        public static string ToSafetyString(this object obj)
+        {
+            if (obj != null)
+                return obj.ToString();
+            else
+                return string.Empty;
+        }
+
         public static string ToUpperFirstLetter(this string s)
         {
             if (string.IsNullOrEmpty(s))
