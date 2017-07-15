@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.Converters
 {
-    public class ChampionTagConverter<TEnum> : JsonConverter
+    public class TagConverter<TEnum> : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {

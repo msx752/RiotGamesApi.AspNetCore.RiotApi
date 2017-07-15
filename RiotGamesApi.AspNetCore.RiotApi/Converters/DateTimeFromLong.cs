@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace RiotGamesApi.AspNetCore.RiotApi.Converters
 {
-    public class DateTimeFromLong : JsonConverter
+    public class LongToDateTime : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {

@@ -18,7 +18,7 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Summoner
         [JsonProperty("profileIconId")]
         public int ProfileIconId { get; set; }
 
-        [JsonConverter(typeof(DateTimeFromLong))]
+        [JsonConverter(typeof(LongToDateTime))]
         [JsonProperty("revisionDate")]
         public DateTime RevisionDate { get; set; }
 

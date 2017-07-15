@@ -27,7 +27,7 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.ChampionMastery
         [JsonProperty("championPointsSinceLastLevel")]
         public long ChampionPointsSinceLastLevel { get; set; }
 
-        [JsonConverter(typeof(DateTimeFromLong))]
+        [JsonConverter(typeof(LongToDateTime))]
         [JsonProperty("lastPlayTime")]
         public DateTime LastPlayTime { get; set; }
     }
