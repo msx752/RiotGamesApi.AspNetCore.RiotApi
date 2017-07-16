@@ -74,25 +74,30 @@ build_script:
 
     {
 
-    $SVersion = $($env:APPVEYOR_BUILD_VERSION);
+  $SVersion = $($env:APPVEYOR_BUILD_VERSION);
 
-    Write-Host "$($env:APPVEYOR_PROJECT_NAME) Version:$SVersion";
+  Write-Host "$($env:APPVEYOR_PROJECT_NAME) Version:$SVersion";
 
-    $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe";
+  dotnet clean -c Release;
 
-    $targetNugetExe = "$rootPath\nuget.exe";
+  if(!(get-alias -name nuget))
+  {   
 
-    Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe;
+      $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe";
 
-    Set-Alias nuget $targetNugetExe -Scope Global -Verbose;
+      $targetNugetExe = "$rootPath\nuget.exe";
 
-    dotnet clean -c Release;
+      Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe;
 
-    nuget restore;
+      Write-Host "# Nuget alias is setting";
 
-    dotnet restore;
+      Set-Alias nuget $targetNugetExe -Scope Global -Verbose;
 
-    dotnet build -c Release  /p:Version=$newBuildNumber --framework netcoreapp1.1;
+  }
+
+nuget restore;
+
+dotnet msbuild /p:Configuration=Release /p:Version=$newBuildNumber;
 
     nuget pack -version $newBuildNumber;
 
