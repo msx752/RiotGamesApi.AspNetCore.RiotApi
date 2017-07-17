@@ -36,10 +36,8 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public ServicePlatform platformId { get; set; }
 
         //
-
-        [JsonConverter(typeof(StringToEnum<GameMode>))]
         [JsonProperty("gameMode")]
-        public GameMode gameMode { get; set; }
+        public string gameMode { get; set; }
 
         //
         [JsonProperty("mapId")]

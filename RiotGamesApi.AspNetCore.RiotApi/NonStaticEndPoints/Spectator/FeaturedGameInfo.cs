@@ -24,9 +24,8 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Spectator
         public ServicePlatform platformId { get; set; }
 
         //The game mode
-        [JsonConverter(typeof(StringToEnum<GameMode>))]
         [JsonProperty("gameMode")]
-        public GameMode gameMode { get; set; }
+        public string gameMode { get; set; }
 
         //The ID of the map
         [JsonProperty("mapId")]
