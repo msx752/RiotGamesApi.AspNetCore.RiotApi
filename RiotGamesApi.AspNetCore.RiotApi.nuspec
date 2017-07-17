@@ -11,7 +11,7 @@
         <iconUrl>https://github.com/msx752/RiotGamesApi.AspNetCore/blob/master/wfc.png?raw=true</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>C# AspNetCore LeagueOfLegends API v3 Library.</description>
-        <summary>C# AspNetCore LeagueOfLegends API v3</summary>
+        <summary>C# AspNetCore LeagueOfLegends API v3 (only ClassLibrary)</summary>
         <releaseNotes></releaseNotes>
         <copyright>Copyright 2017</copyright>
         <language />
