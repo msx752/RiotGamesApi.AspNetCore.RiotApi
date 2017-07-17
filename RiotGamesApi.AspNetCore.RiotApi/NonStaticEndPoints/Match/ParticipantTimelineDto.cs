@@ -38,9 +38,8 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public Dictionary<string, double> xpPerMinDeltas { get; set; }
 
         //
-        [JsonConverter(typeof(StringToEnum<Role>))]
         [JsonProperty("role")]
-        public Role role { get; set; }
+        public string role { get; set; }
 
         //
         [JsonProperty("damageTakenDiffPerMinDeltas")]

@@ -1,6 +1,6 @@
 ﻿namespace RiotGamesApi.AspNetCore.RiotApi.Enums
 {
-    public enum Platform
+    public enum ServicePlatform
     {
         UNDEFINED,
         RU,

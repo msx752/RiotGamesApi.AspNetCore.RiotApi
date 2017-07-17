@@ -22,9 +22,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public string matchHistoryUri { get; set; }
 
         //
-        [JsonConverter(typeof(StringToEnum<Platform>))]
+        [JsonConverter(typeof(StringToEnum<ServicePlatform>))]
         [JsonProperty("platformId")]
-        public Platform platformId { get; set; }
+        public ServicePlatform platformId { get; set; }
 
         //
         [JsonProperty("currentAccountId")]

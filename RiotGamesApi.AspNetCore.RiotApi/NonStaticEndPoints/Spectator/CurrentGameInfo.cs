@@ -19,9 +19,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Spectator
 
         //The ID of the platform on which the game is being played
 
-        [JsonConverter(typeof(StringToEnum<Platform>))]
+        [JsonConverter(typeof(StringToEnum<ServicePlatform>))]
         [JsonProperty("platformId")]
-        public Platform platformId { get; set; }
+        public ServicePlatform platformId { get; set; }
 
         //The game mode
 
@@ -34,9 +34,8 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Spectator
         public long mapId { get; set; }
 
         //The game type
-        [JsonConverter(typeof(StringToEnum<GameType>))]
         [JsonProperty("gameType")]
-        public GameType gameType { get; set; }
+        public string gameType { get; set; }
 
         //Banned champion information
         [JsonProperty("bannedChampions")]

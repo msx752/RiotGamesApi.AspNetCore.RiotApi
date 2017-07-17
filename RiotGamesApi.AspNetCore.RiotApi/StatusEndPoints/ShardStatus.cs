@@ -14,9 +14,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.StatusEndPoints
         public string name { get; set; }
 
         //
-        [JsonConverter(typeof(StringToEnum<Platform>))]
+        [JsonConverter(typeof(StringToEnum<ServicePlatform>))]
         [JsonProperty("region_tag")]
-        public Platform region_tag { get; set; }
+        public ServicePlatform region_tag { get; set; }
 
         //
         [JsonProperty("hostname")]

@@ -19,9 +19,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.TournamentEndPoints
         public string spectators { get; set; }
 
         //The tournament code's region. (Legal values: BR, EUNE, EUW, JP, LAN, LAS, NA, OCE, PBE, RU, TR)
-        [JsonConverter(typeof(Region))]
+        [JsonConverter(typeof(ServiceRegion))]
         [JsonProperty("region")]
-        public Region region { get; set; }
+        public ServiceRegion region { get; set; }
 
         //The provider's ID.
         [JsonProperty("providerId")]

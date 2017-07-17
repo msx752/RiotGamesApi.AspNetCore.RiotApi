@@ -31,9 +31,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
 
         //
 
-        [JsonConverter(typeof(StringToEnum<Platform>))]
+        [JsonConverter(typeof(StringToEnum<ServicePlatform>))]
         [JsonProperty("platformId")]
-        public Platform platformId { get; set; }
+        public ServicePlatform platformId { get; set; }
 
         //
 
@@ -46,9 +46,8 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public int mapId { get; set; }
 
         //
-        [JsonConverter(typeof(StringToEnum<GameType>))]
         [JsonProperty("gameType")]
-        public GameType gameType { get; set; }
+        public string gameType { get; set; }
 
         //
         [JsonProperty("teams")]

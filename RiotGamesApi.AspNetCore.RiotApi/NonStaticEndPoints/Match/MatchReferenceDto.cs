@@ -22,9 +22,9 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public int champion { get; set; }
 
         //
-        [JsonConverter(typeof(StringToEnum<Platform>))]
+        [JsonConverter(typeof(StringToEnum<ServicePlatform>))]
         [JsonProperty("platformId")]
-        public Platform platformId { get; set; }
+        public ServicePlatform platformId { get; set; }
 
         //
         [JsonProperty("season")]
@@ -35,9 +35,8 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Match
         public int queue { get; set; }
 
         //
-        [JsonConverter(typeof(StringToEnum<Role>))]
         [JsonProperty("role")]
-        public Role role { get; set; }
+        public string role { get; set; }
 
         [JsonProperty("timestamp")]
         public long timestamp { get; set; }

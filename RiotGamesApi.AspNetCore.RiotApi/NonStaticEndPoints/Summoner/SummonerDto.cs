@@ -25,6 +25,6 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.Summoner
         [JsonProperty("summonerLevel")]
         public int SummonerLevel { get; set; }
 
-        public Region Region;
+        public ServiceRegion Region;
     }
 }

@@ -12,9 +12,8 @@ namespace RiotGamesApi.AspNetCore.RiotApi.NonStaticEndPoints.League
         [JsonProperty("rank")]
         public string rank { get; set; }
 
-        [JsonConverter(typeof(StringToEnum<Queue>))]
         [JsonProperty("queueType")]
-        public Queue queueType { get; set; }
+        public string queueType { get; set; }
 
         [JsonProperty("hotStreak")]
         public bool hotStreak { get; set; }

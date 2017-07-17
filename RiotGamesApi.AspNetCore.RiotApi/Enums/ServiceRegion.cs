@@ -1,6 +1,6 @@
 ﻿namespace RiotGamesApi.AspNetCore.RiotApi.Enums
 {
-    public enum Region
+    public enum ServiceRegion
     {
         UNDEFINED,
 
