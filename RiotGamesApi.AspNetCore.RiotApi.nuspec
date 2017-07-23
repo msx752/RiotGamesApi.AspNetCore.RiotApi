@@ -18,8 +18,8 @@
         <tags>RiotGames LeagueOfLegends API v3 Library c# AspNetCore 1.1 project</tags>
         <dependencies>
             <group targetFramework=".NETCoreApp1.1">
-                <dependency id="Microsoft.NETCore.App" version="1.1.2" exclude="Build,Analyzers" /> 
-                <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
+                <dependency id="Microsoft.NETCore.App" version="1.1.2" /> 
+                <dependency id="Newtonsoft.Json" version="10.0.3"  />
             </group>
         </dependencies>
     </metadata>
