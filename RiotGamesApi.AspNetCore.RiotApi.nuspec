@@ -10,8 +10,8 @@
         <projectUrl>https://github.com/msx752/RiotGamesApi.AspNetCore.RiotApi</projectUrl>
         <iconUrl>https://github.com/msx752/RiotGamesApi.AspNetCore/blob/master/wfc.png?raw=true</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>C# AspNetCore LeagueOfLegends API v3 Library.</description>
-        <summary>C# AspNetCore LeagueOfLegends API v3 (only ClassLibrary)</summary>
+        <description>C# AspNetCore LeagueOfLegends v3 ApiClassLibrary.</description>
+        <summary>C# AspNetCore LeagueOfLegends v3 (only ClassLibrary)</summary>
         <releaseNotes></releaseNotes>
         <copyright>Copyright 2017</copyright>
         <language />
@@ -19,7 +19,7 @@
         <dependencies>
             <group targetFramework=".NETCoreApp1.1">
                 <dependency id="Microsoft.NETCore.App" version="1.1.2" exclude="Build,Analyzers" /> 
-                <dependency id="Newtonsoft.Json" version="9.0.1" exclude="Build,Analyzers" />
+                <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
             </group>
         </dependencies>
     </metadata>
