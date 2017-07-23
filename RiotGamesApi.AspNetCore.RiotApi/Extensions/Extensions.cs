@@ -138,5 +138,21 @@ namespace RiotGamesApi.AspNetCore.RiotApi.Extensions
                     return Language.en_US;
             }
         }
+
+        /// <summary>
+        /// get enum value from stringName 
+        /// </summary>
+        /// <typeparam name="T">
+        /// Type Of enum 
+        /// </typeparam>
+        /// <param name="enumValName">
+        /// StringName of enum 
+        /// </param>
+        /// <returns>
+        /// </returns>
+        public static T GetEnumValue<T>(string enumValName) where T : new()
+        {
+            return (T)Enum.Parse(typeof(T), enumValName);
+        }
     }
 }
