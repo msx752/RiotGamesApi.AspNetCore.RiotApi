@@ -3,15 +3,15 @@
     <metadata>
          <id>RiotGamesApi.AspNetCore.RiotApi</id>
         <version>1.0.0.0</version>
-        <title>RiotGames LeagueOfLegends v3 ApiClassLibrary</title>
+        <title>RiotGames LeagueOfLegends v3 and upper ApiClassLibrary</title>
         <authors>Mustafa Salih ASLIM</authors>
         <owners>Mustafa Salih ASLIM</owners>
         <licenseUrl>https://github.com/msx752/RiotGamesApi.AspNetCore.RiotApi/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/msx752/RiotGamesApi.AspNetCore.RiotApi</projectUrl>
         <iconUrl>https://github.com/msx752/RiotGamesApi.AspNetCore/blob/master/wfc.png?raw=true</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>C# AspNetCore LeagueOfLegends v3 ApiClassLibrary.</description>
-        <summary>C# AspNetCore LeagueOfLegends v3 (only ClassLibrary)</summary>
+        <description>C# AspNetCore LeagueOfLegends v3 and upper ApiClassLibrary.</description>
+        <summary>C# AspNetCore LeagueOfLegends v3 and upper (only ClassLibrary)</summary>
         <releaseNotes></releaseNotes>
         <copyright>Copyright 2017</copyright>
         <language />
