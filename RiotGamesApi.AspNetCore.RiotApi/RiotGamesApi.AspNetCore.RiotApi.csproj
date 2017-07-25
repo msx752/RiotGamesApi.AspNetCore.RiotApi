@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TournamentStubEndPoints\" />
+    <Folder Include="v3\TournamentStubEndPoints\" />
   </ItemGroup>
 
 </Project>
