@@ -5,6 +5,10 @@
 # RiotGamesApi.AspNetCore.RiotApi
 RiotGames League Of Legends V3 API (only ClassLibrary)
 
+# Project
+- https://github.com/msx752/RiotGamesApi.AspNetCore
+
+
 ApiName | Version
 --- | ---
 CHAMPION-MASTERY | [V3](https://github.com/msx752/RiotGamesApi.AspNetCore.RiotApi/blob/master/RiotGamesApi.AspNetCore.RiotApi/v3/NonStaticEndPoints)
